@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Little Reader Adventures</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="decorative-layer" aria-hidden="true">
+      <span class="floating deco-cloud cloud-1">☁️</span>
+      <span class="floating deco-cloud cloud-2">☁️</span>
+      <span class="floating deco-star star-1">✨</span>
+      <span class="floating deco-star star-2">🌟</span>
+      <span class="floating deco-bubble bubble-1">🫧</span>
+      <span class="floating deco-bubble bubble-2">🫧</span>
+      <span class="floating deco-sparkle sparkle-1">💫</span>
+      <span class="floating deco-sparkle sparkle-2">💫</span>
+    </div>
+
+    <div id="confetti-layer" aria-hidden="true"></div>
+
+    <div id="app">
+      <header class="adventure-header">
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="tiny-label">Captain Ready’s Adventure HQ</p>
+            <h1>Little Reader Adventures</h1>
+            <p class="subtitle">UK reading practice made like a treasure game</p>
+          </div>
+          <div class="mascot-ship" aria-hidden="true">🦖</div>
+        </section>
+
+        <section class="overview" aria-live="polite">
+          <div class="status-card">
+            <span>🌟 Level</span>
+            <strong id="level-pill">1</strong>
+          </div>
+          <div class="status-card">
+            <span>🪙 Coins</span>
+            <strong id="coin-count">0</strong>
+          </div>
+          <div class="status-card">
+            <span>🔥 Streak</span>
+            <strong id="streak">0</strong>
+          </div>
+          <div class="status-card">
+            <span>🎯 Accuracy</span>
+            <strong id="total-score">0%</strong>
+          </div>
+        </section>
+
+        <section class="xp-row">
+          <div>
+            <strong>XP Trail</strong>
+            <div id="xp-status">0 / 120</div>
+          </div>
+          <div class="meter xp-meter">
+            <span class="meter-fill" id="xp-bar"></span>
+          </div>
+        </section>
+
+        <p id="reward-banner" class="reward-banner" aria-live="polite"></p>
+      </header>
+
+      <nav class="tab-bar" aria-label="Main activities">
+        <button class="tab-btn active" data-tab="home" aria-label="Adventure">Adventure</button>
+        <button class="tab-btn" data-tab="phonics" aria-label="Sound Safari">Sound Safari</button>
+        <button class="tab-btn" data-tab="word" aria-label="Word Castle">Word Castle</button>
+        <button class="tab-btn" data-tab="sight" aria-label="Star Words">Star Words</button>
+        <button class="tab-btn" data-tab="stories" aria-label="Story Cave">Story Cave</button>
+        <button class="tab-btn" data-tab="progress" aria-label="Treasure Map">Treasure Map</button>
+        <button class="tab-btn" data-tab="parent" aria-label="Grown-ups">Grown-ups</button>
+      </nav>
+
+      <main>
+        <section id="home" class="panel active">
+          <section class="adventure-hero">
+            <div class="mascot-sprite" aria-hidden="true">🧸</div>
+            <div>
+              <h2>Ready for today’s mission?</h2>
+              <p class="lead">
+                Tap a card, earn coins, and grow your reading map one brave step at a time.
+              </p>
+            </div>
+          </section>
+
+          <div class="cards">
+            <article class="adventure-card" id="quest-card">
+              <div class="card-icon">🗺️</div>
+              <h3>Today’s Adventure Missions</h3>
+              <p id="mission-title">Load a quest to begin.</p>
+              <div id="mission-list" class="quest-list"></div>
+              <button id="quest-refresh" class="light-btn">New Quest Pack</button>
+            </article>
+
+            <article class="adventure-card">
+              <div class="card-icon">🦜</div>
+              <h3>Sound Safari</h3>
+              <p>Find first, end, and cluster sounds in tiny words.</p>
+              <button class="panel-btn" data-goto="phonics">Open Safari</button>
+            </article>
+
+            <article class="adventure-card">
+              <div class="card-icon">🧱</div>
+              <h3>Word Castle</h3>
+              <p>Build words with letter tiles and hear each one spoken.</p>
+              <button class="panel-btn" data-goto="word">Build a Castle Word</button>
+            </article>
+
+            <article class="adventure-card">
+              <div class="card-icon">⭐</div>
+              <h3>Star Words</h3>
+              <p>Practice the most used words children meet every day.</p>
+              <button class="panel-btn" data-goto="sight">Catch Star Words</button>
+            </article>
+
+            <article class="adventure-card">
+              <div class="card-icon">📖</div>
+              <h3>Story Cave</h3>
+              <p>Read with Captain, listen to the text, then answer the cave riddle.</p>
+              <button class="panel-btn" data-goto="stories">Enter the Cave</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="phonics" class="panel" aria-live="polite">
+          <h2>Sound Safari</h2>
+          <p id="phonics-stage" class="stage-tag">Level loading…</p>
+          <div class="activity-card">
+            <div class="prompt-speech">
+              <span class="activity-mascot" aria-hidden="true">🦜</span>
+              <p id="phonics-mascot" class="mascot-speech">Let’s listen and spot the sound.</p>
+            </div>
+            <div id="phonics-prompt" class="prompt">Ready?</div>
+            <div id="phonics-options" class="option-grid"></div>
+            <p id="phonics-result" class="result"></p>
+            <div class="inline-actions">
+              <button id="phonics-replay" class="light-btn">Hear Word Again</button>
+              <button id="phonics-next" class="light-btn">Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="word" class="panel" aria-live="polite">
+          <h2>Word Castle</h2>
+          <p id="word-stage" class="stage-tag">Level loading…</p>
+          <div class="activity-card">
+            <div class="prompt-speech">
+              <span class="activity-mascot" aria-hidden="true">🧱</span>
+              <p id="word-mascot" class="mascot-speech">Tap letters to build the treasure word.</p>
+            </div>
+            <div class="clue" id="word-clue">Build the word.</div>
+            <div id="word-target" class="word-target"></div>
+            <div id="word-slots" class="word-slots"></div>
+            <div id="word-tiles" class="word-tiles"></div>
+            <p id="word-result" class="result"></p>
+            <div class="inline-actions">
+              <button id="word-check" class="light-btn">Check</button>
+              <button id="word-clear" class="light-btn">Clear</button>
+              <button id="word-reveal" class="light-btn">Hear Word</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="sight" class="panel" aria-live="polite">
+          <h2>Star Words</h2>
+          <p id="sight-stage" class="stage-tag">Level loading…</p>
+          <div class="activity-card">
+            <div class="prompt-speech">
+              <span class="activity-mascot" aria-hidden="true">⭐</span>
+              <p id="sight-mascot" class="mascot-speech">Listen to your word and tap the right card.</p>
+            </div>
+            <p id="sight-instruction">Listen and tap the word.</p>
+            <div id="sight-options" class="option-grid"></div>
+            <p id="sight-result" class="result"></p>
+            <div class="inline-actions">
+              <button id="sight-replay" class="light-btn">Hear Prompt</button>
+              <button id="sight-next" class="light-btn">Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="stories" class="panel" aria-live="polite">
+          <h2>Story Cave</h2>
+          <p class="lead">Read or listen, then answer one question at a time.</p>
+          <div class="activity-card">
+            <div class="prompt-speech">
+              <span class="activity-mascot" aria-hidden="true">🧙‍♂️</span>
+              <p id="stories-mascot" class="mascot-speech">Let’s open the story cave door.</p>
+            </div>
+            <h3 id="story-title">Ready</h3>
+            <div id="story-text" class="story-text"></div>
+            <div class="inline-actions">
+              <button id="story-listen" class="light-btn">Hear Story</button>
+            </div>
+            <p id="story-question" class="story-question">Tap Start when ready.</p>
+            <div id="story-options" class="option-grid"></div>
+            <p id="story-result" class="result"></p>
+            <div class="inline-actions">
+              <button id="story-action" class="light-btn">Start</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="progress" class="panel" aria-live="polite">
+          <h2>Treasure Map</h2>
+          <p class="lead">Every activity marks your progress on the map.</p>
+
+          <div id="progress-list" class="progress-list">
+            <article class="progress-item" data-module="phonics">
+              <span>Sound Safari</span>
+              <small id="level-phonics">Unit: 1</small>
+              <div class="meter"><span class="meter-fill" id="bar-phonics"></span></div>
+              <small id="txt-phonics">No attempts yet</small>
+            </article>
+            <article class="progress-item" data-module="words">
+              <span>Word Castle</span>
+              <small id="level-words">Unit: 1</small>
+              <div class="meter"><span class="meter-fill" id="bar-words"></span></div>
+              <small id="txt-words">No attempts yet</small>
+            </article>
+            <article class="progress-item" data-module="sight">
+              <span>Star Words</span>
+              <small id="level-sight">Unit: 1</small>
+              <div class="meter"><span class="meter-fill" id="bar-sight"></span></div>
+              <small id="txt-sight">No attempts yet</small>
+            </article>
+            <article class="progress-item" data-module="stories">
+              <span>Story Cave</span>
+              <small id="level-stories">Unit: 1</small>
+              <div class="meter"><span class="meter-fill" id="bar-stories"></span></div>
+              <small id="txt-stories">No attempts yet</small>
+            </article>
+          </div>
+
+          <h3>Adventure Missions</h3>
+          <div id="quest-panel" class="quest-panel"></div>
+
+          <h3>Sticker Badges</h3>
+          <div id="badge-list" class="badge-list"></div>
+        </section>
+
+        <section id="parent" class="panel parent-screen">
+          <h2>Grown-ups</h2>
+          <p class="lead adult-note">Summary and controls for adults.</p>
+
+          <div class="activity-card adult-card">
+            <h3>What your child is practising</h3>
+            <ul id="goal-list"></ul>
+          </div>
+
+          <div class="activity-card adult-card">
+            <h3>Choose a Theme</h3>
+            <div id="theme-picker" class="theme-picker"></div>
+          </div>
+
+          <div class="activity-card adult-card">
+            <h3>Progress message</h3>
+            <p id="export-result"></p>
+            <button id="export-progress" class="light-btn">Show progress summary</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
