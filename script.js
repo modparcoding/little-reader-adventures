@@ -879,6 +879,7 @@ let wordSlots = [];
 let currentSight = null;
 let storyState = { story: null, questionIndex: 0, ready: false, running: false, lastStoryTitle: '' };
 let chosenVoice = null;
+let storyQuestionTimer = null;
 
 function normaliseText(text) {
   return String(text).replace(/['\u2018\u2019]/g, "'");
@@ -1547,9 +1548,14 @@ function renderSightQuestion() {
   nextEl.onclick = renderSightQuestion;
 }
 
-function setupStory() {
-  if (storyState.ready || storyState.running) {
+function setupStory(force = false) {
+  if (!force && (storyState.ready || storyState.running)) {
     return;
+  }
+
+  if (storyQuestionTimer) {
+    clearTimeout(storyQuestionTimer);
+    storyQuestionTimer = null;
   }
 
   const level = clampModuleLevel('stories');
@@ -1596,7 +1602,7 @@ function shuffleStory() {
   storyState.ready = false;
   storyState.running = false;
   storyState.questionIndex = 0;
-  setupStory();
+  setupStory(true);
 }
 
 function renderStoryQuestion() {
@@ -1641,7 +1647,13 @@ function renderStoryQuestion() {
       setMascotSpeech('stories', correct ? 'You solved that cave riddle! ⭐' : 'That is a sneaky one. Try again.');
       disableButtons(optionsEl, true);
       storyState.questionIndex += 1;
-      setTimeout(renderStoryQuestion, 900);
+      if (storyQuestionTimer) {
+        clearTimeout(storyQuestionTimer);
+      }
+      storyQuestionTimer = setTimeout(() => {
+        storyQuestionTimer = null;
+        renderStoryQuestion();
+      }, 900);
     });
     optionsEl.appendChild(button);
   });
