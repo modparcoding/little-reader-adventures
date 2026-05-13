@@ -169,6 +169,137 @@ const STORY_LEVELS = [
         { q: 'What was being carried?', options: ['A toy', 'A crumb', 'A leaf'], answer: 1 }
       ]
     }
+    ,
+    {
+      title: 'Milo and the Missing Sock',
+      lines: [
+        'Milo looked for his blue sock.',
+        'He checked under the bed.',
+        'He found it in his school bag.',
+        'Now he could play soccer.'
+      ],
+      questions: [
+        { q: 'What was Milo missing?', options: ['His hat', 'His sock', 'His shoe'], answer: 1 },
+        { q: 'Where did he find it?', options: ['On the wall', 'In the bag', 'In the garden'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Little Yellow Duck',
+      lines: [
+        'A little yellow duck sat in a pond.',
+        'A frog jumped near the water.',
+        'The duck shook her feathers.',
+        'She floated away with a splash.'
+      ],
+      questions: [
+        { q: 'Where did the duck sit?', options: ['In the pond', 'On a bus', 'On a tree'], answer: 0 },
+        { q: 'What happened in the water?', options: ['It froze', 'It splashed', 'It was dry'], answer: 1 }
+      ]
+    },
+    {
+      title: 'Busy Bee and the Sweet Honey',
+      lines: [
+        'A bee visited the blue flower.',
+        'It collected a little pollen.',
+        'Then it flew to a beehive.',
+        'The hive smelled sweet and warm.'
+      ],
+      questions: [
+        { q: 'What did the bee visit?', options: ['A flower', 'A shoe', 'A bike'], answer: 0 },
+        { q: 'What was in the hive?', options: ['Clouds', 'Honey', 'Snow'], answer: 1 }
+      ]
+    },
+    {
+      title: 'Mia and the Green Cap',
+      lines: [
+        'Mia wore her green cap to school.',
+        'It kept the sun off her eyes.',
+        'At lunch she sat in the shade.',
+        'She waved her cap and smiled.'
+      ],
+      questions: [
+        { q: 'What colour was her cap?', options: ['Green', 'Red', 'Blue'], answer: 0 },
+        { q: 'When did she sit in the shade?', options: ['Morning', 'Lunch', 'Night'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Tiny Seed',
+      lines: [
+        'A tiny seed slept in soft soil.',
+        'Rain fell gently for one day.',
+        'A tiny sprout broke the ground.',
+        'Soon, a little plant waved in sun.'
+      ],
+      questions: [
+        { q: 'Where did the seed sleep?', options: ['In water', 'In soil', 'On a wall'], answer: 1 },
+        { q: 'What grew after rain?', options: ['A rock', 'A sprout', 'A shoe'], answer: 1 }
+      ]
+    },
+    {
+      title: 'A Short Walk',
+      lines: [
+        'Sam took a short walk with dad.',
+        'They passed a red gate.',
+        'A cat sat on the gate.',
+        'Sam waved and said hello.'
+      ],
+      questions: [
+        { q: 'Who walked with Sam?', options: ['Mum', 'Dad', 'Grandpa'], answer: 1 },
+        { q: 'What sat on the gate?', options: ['A dog', 'A cat', 'A bird'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Big Apple',
+      lines: [
+        'Ella saw a big red apple.',
+        'She washed it in the sink.',
+        'She made a neat bite.',
+        'The bite was sweet and crisp.'
+      ],
+      questions: [
+        { q: 'What fruit did Ella see?', options: ['Banana', 'Apple', 'Orange'], answer: 1 },
+        { q: 'Where did she wash it?', options: ['In the sink', 'In the mud', 'In the grass'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Grandma’s Cat',
+      lines: [
+        'Grandma had a cat called Dot.',
+        'Dot sat beside a warm pot.',
+        'Dot purred when she heard music.',
+        'Grandma laughed and gave Dot milk.'
+      ],
+      questions: [
+        { q: 'What is the cat called?', options: ['Dot', 'Paw', 'Kit'], answer: 0 },
+        { q: 'What did Grandma give Dot?', options: ['Milk', 'Soup', 'Water'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Blue Crayon',
+      lines: [
+        'Tom found a blue crayon.',
+        'He drew a kite in the air.',
+        'The kite had a big tail.',
+        'He wrote his name beneath it.'
+      ],
+      questions: [
+        { q: 'What colour was the crayon?', options: ['Blue', 'Green', 'Yellow'], answer: 0 },
+        { q: 'What did Tom draw?', options: ['A train', 'A kite', 'A duck'], answer: 1 }
+      ]
+    },
+    {
+      title: 'Sunny’s Paper Boat',
+      lines: [
+        'Sunny made a paper boat.',
+        'She put it in a bowl of water.',
+        'The boat floated near the edge.',
+        'Sunny gently pushed it across.'
+      ],
+      questions: [
+        { q: 'What did Sunny make?', options: ['A house', 'A boat', 'A hat'], answer: 1 },
+        { q: 'What did she put it in?', options: ['A bowl of water', 'A basket', 'A box'], answer: 0 }
+      ]
+    }
   ],
   [
     {
@@ -182,6 +313,136 @@ const STORY_LEVELS = [
       questions: [
         { q: 'What did Mia put on?', options: ['Raincoat', 'Scarf', 'Gloves'], answer: 0 },
         { q: 'Why did she take an umbrella?', options: ['For sunshine', 'For rain', 'For cold wind only'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The New Paint',
+      lines: [
+        'Leo found new paint at home.',
+        'He put on his old shirt.',
+        'He painted a giant house.',
+        'At the end, he washed his hands.'
+      ],
+      questions: [
+        { q: 'What did Leo find?', options: ['A book', 'New paint', 'A ball'], answer: 1 },
+        { q: 'What did he paint?', options: ['A house', 'A tree', 'A car'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Lost Balloon',
+      lines: [
+        'At the fair, Nia held a red balloon.',
+        'A strong wind blew it away.',
+        'She spotted it over the fountain.',
+        'A guard helped her get it back.'
+      ],
+      questions: [
+        { q: 'What colour was Nia’s balloon?', options: ['Red', 'Blue', 'Pink'], answer: 0 },
+        { q: 'Who helped her?', options: ['A guard', 'A dog', 'A teacher'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Zoe’s Picnic',
+      lines: [
+        'Zoe packed a sandwich and fruit.',
+        'She found a blanket by the tree.',
+        'Her friend came with orange juice.',
+        'They sat and shared their food.'
+      ],
+      questions: [
+        { q: 'What did Zoe bring?', options: ['Only juice', 'A sandwich and fruit', 'A football'], answer: 1 },
+        { q: 'Who shared the juice?', options: ['Her friend', 'Her brother', 'Her dog'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Cat’s Nap',
+      lines: [
+        'Milo’s cat slept in a basket.',
+        'Rain tapped softly on the roof.',
+        'After the nap, the cat blinked.',
+        'Milo stroked it gently.'
+      ],
+      questions: [
+        { q: 'Where did the cat sleep?', options: ['On a chair', 'In a basket', 'In a box'], answer: 1 },
+        { q: 'What did Milo do after nap?', options: ['Fed it', 'Stroked it', 'Painted it'], answer: 1 }
+      ]
+    },
+    {
+      title: 'At the Postbox',
+      lines: [
+        'Eva wrote a small letter.',
+        'She ran to the red postbox.',
+        'She put the letter inside.',
+        'A postman waved from the corner.'
+      ],
+      questions: [
+        { q: 'What colour was the postbox?', options: ['Blue', 'Red', 'Green'], answer: 1 },
+        { q: 'Who waved?', options: ['A postman', 'A baker', 'A firefighter'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Missing Shoe',
+      lines: [
+        'Tariq could not find one shoe.',
+        'He looked at the garden path.',
+        'The shoe was behind the porch.',
+        'He wore it and ran outside.'
+      ],
+      questions: [
+        { q: 'What was missing?', options: ['A sock', 'A shoe', 'A hat'], answer: 1 },
+        { q: 'Where was it found?', options: ['In the garden', 'Behind the porch', 'In the fridge'], answer: 1 }
+      ]
+    },
+    {
+      title: 'Poppy at the Pond',
+      lines: [
+        'Poppy sat by the pond.',
+        'She watched a duck paddle slowly.',
+        'A frog jumped into the water.',
+        'Poppy clapped and laughed.'
+      ],
+      questions: [
+        { q: 'What bird did Poppy watch?', options: ['A duck', 'A crow', 'A hawk'], answer: 0 },
+        { q: 'What jumped into water?', options: ['A fish', 'A frog', 'A turtle'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Gentle Bear',
+      lines: [
+        'A gentle bear lost its hat.',
+        'A child found it near stones.',
+        'The bear smiled and bowed.',
+        'The child waved and walked away.'
+      ],
+      questions: [
+        { q: 'Who lost the hat?', options: ['The bear', 'The child', 'A rabbit'], answer: 0 },
+        { q: 'What did the child find?', options: ['A key', 'A hat', 'A glove'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Tiny Drum',
+      lines: [
+        'Noah found a tiny drum in the shed.',
+        'He tapped it once, then twice.',
+        'His friend clapped in rhythm.',
+        'Soon they were both smiling.'
+      ],
+      questions: [
+        { q: 'What did Noah tap?', options: ['A drum', 'A plate', 'A spoon'], answer: 0 },
+        { q: 'Where was the drum?', options: ['In the shed', 'At school', 'On a bus'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Library Day',
+      lines: [
+        'Maya went to the library.',
+        'She chose a book about stars.',
+        'She sat by the carpet and read.',
+        'She found the best seat near light.'
+      ],
+      questions: [
+        { q: 'Where did Maya go?', options: ['Library', 'Zoo', 'Beach'], answer: 0 },
+        { q: 'What was the book about?', options: ['Stars', 'Cats', 'Robots'], answer: 0 }
       ]
     }
   ],
@@ -198,6 +459,136 @@ const STORY_LEVELS = [
         { q: 'Where did Ben go?', options: ['Museum', 'Bakery', 'Park'], answer: 1 },
         { q: 'What did Ben take home?', options: ['Bread', 'A cake', 'A toy'], answer: 1 }
       ]
+    },
+    {
+      title: 'The Train Platform',
+      lines: [
+        'Sam waited on a bright platform.',
+        'The train came with a chugging sound.',
+        'His seat was by the window.',
+        'He counted trees going past.'
+      ],
+      questions: [
+        { q: 'What did Sam hear?', options: ['A train', 'A kite', 'A bell'], answer: 0 },
+        { q: 'What was his seat like?', options: ['By the door', 'By the window', 'On the roof'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Clockmaker',
+      lines: [
+        'Nina found an old clockmaker shop.',
+        'Tics and tocks were loud inside.',
+        'The man showed her a ticking watch.',
+        'She waved and thanked him.'
+      ],
+      questions: [
+        { q: 'What sound did she hear?', options: ['Tick-tock', 'Splash', 'Roar'], answer: 0 },
+        { q: 'What did the man show her?', options: ['A watch', 'A kite', 'A cup'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Paper Plane Club',
+      lines: [
+        'A group made paper planes in class.',
+        'Each one had a different colour.',
+        'They flew together from the gym.',
+        'The strongest plane won cheers.'
+      ],
+      questions: [
+        { q: 'What did they make?', options: ['Paper boats', 'Paper planes', 'Paper hats'], answer: 1 },
+        { q: 'Where did they fly them?', options: ['In the gym', 'In the pool', 'In the kitchen'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Captain Leo and the Tunnel',
+      lines: [
+        'Captain Leo wore a blue coat.',
+        'He walked slowly through a tunnel.',
+        'His torch gave out a small light.',
+        'At the end, daylight shone bright.'
+      ],
+      questions: [
+        { q: 'What colour coat did Leo wear?', options: ['Blue', 'Red', 'Yellow'], answer: 0 },
+        { q: 'Where did he walk through?', options: ['A tunnel', 'A field', 'A cave'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Bicycle Repair',
+      lines: [
+        'Maya saw a cycle with flat tyre.',
+        'Her dad gave her a small pump.',
+        'She inflated the wheel gently.',
+        'The bike rolled back home.'
+      ],
+      questions: [
+        { q: 'What was wrong with the cycle?', options: ['Broken wheel', 'No chain', 'Paint issue'], answer: 0 },
+        { q: 'What did her dad give her?', options: ['A pump', 'A brush', 'A map'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Garden Gate',
+      lines: [
+        'Tessa turned the garden gate.',
+        'She heard birds on the fence.',
+        'She put her shoes near the door.',
+        'Then she helped water the beds.'
+      ],
+      questions: [
+        { q: 'What did Tessa turn?', options: ['A gate', 'A tap', 'A wheel'], answer: 0 },
+        { q: 'What did she help water?', options: ['Plants', 'Cars', 'Books'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Festival Lantern',
+      lines: [
+        'Ben and his sister built a paper lantern.',
+        'They pasted a yellow star on top.',
+        'At dusk, they lit a small lamp.',
+        'They held it high in the breeze.'
+      ],
+      questions: [
+        { q: 'What did they make?', options: ['A boat', 'A lantern', 'A kite'], answer: 1 },
+        { q: 'What did they put on top?', options: ['A star', 'A moon', 'A fish'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Campfire Tale',
+      lines: [
+        'The class sat by a small fire.',
+        'They toasted marshmallows carefully.',
+        'The teacher told a brave story.',
+        'Everyone listened in a circle.'
+      ],
+      questions: [
+        { q: 'What did they sit by?', options: ['A fire', 'A pond', 'A train'], answer: 0 },
+        { q: 'Who told the story?', options: ['The teacher', 'The dog', 'The chef'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Rain Boots',
+      lines: [
+        'Ravi wore yellow rain boots.',
+        'Puddles waited in the lane.',
+        'He jumped once, twice, and three times.',
+        'His boots got a little muddy.'
+      ],
+      questions: [
+        { q: 'What colour boots were they?', options: ['Yellow', 'Green', 'Blue'], answer: 0 },
+        { q: 'Where did he jump?', options: ['In puddles', 'On stairs', 'On ice'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Star Map',
+      lines: [
+        'Nora drew a map of stars.',
+        'She marked four points with dots.',
+        'She wrote names beside each star.',
+        'Her friend guessed them right.'
+      ],
+      questions: [
+        { q: 'What did Nora draw?', options: ['A map of stars', 'A map of roads', 'A map of rooms'], answer: 0 },
+        { q: 'How many points did she mark?', options: ['Four', 'Two', 'Six'], answer: 0 }
+      ]
     }
   ],
   [
@@ -212,6 +603,136 @@ const STORY_LEVELS = [
       questions: [
         { q: 'What were they looking at?', options: ['Ships', 'Stars', 'Clouds'], answer: 1 },
         { q: 'How many did they count?', options: ['Seven', 'Ten', 'Twelve'], answer: 1 }
+      ]
+    },
+    {
+      title: 'The Firefly Path',
+      lines: [
+        'Noah followed small fireflies.',
+        'They moved like little lights.',
+        'He held his breath and watched.',
+        'He reached a gate that glowed.'
+      ],
+      questions: [
+        { q: 'What did Noah follow?', options: ['Fireflies', 'Firetruck', 'Fire candles'], answer: 0 },
+        { q: 'What did they look like?', options: ['Little lights', 'Big clouds', 'Paper notes'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Moon Chef',
+      lines: [
+        'At night, Chef Leo wore a white hat.',
+        'He said the moon was round and bright.',
+        'He stirred a bowl of soft dough.',
+        'He baked sweet rolls for all.'
+      ],
+      questions: [
+        { q: 'What was the moon like?', options: ['Round and bright', 'Small and dark', 'Blue and cold'], answer: 0 },
+        { q: 'What did Chef Leo bake?', options: ['Bread rolls', 'Soup', 'Ice'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Rocket Garden',
+      lines: [
+        'Aria planted seeds in a pot.',
+        'She called the pot a rocket garden.',
+        'Water and sunshine helped it grow.',
+        'Tiny leaves sprouted in a week.'
+      ],
+      questions: [
+        { q: 'What did Aria plant?', options: ['Seeds', 'Clouds', 'Pebbles'], answer: 0 },
+        { q: 'Where did she plant them?', options: ['A pot', 'A pond', 'A shelf'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Time Keeper',
+      lines: [
+        'A child found an old clock tower.',
+        'Every hour it rang clear.',
+        'He asked why it always chimes.',
+        'The clock keeper smiled and explained.'
+      ],
+      questions: [
+        { q: 'What did the tower do?', options: ['It rang each hour', 'It sang songs', 'It moved slowly'], answer: 0 },
+        { q: 'Who explained it?', options: ['Clock keeper', 'Baker', 'Police officer'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Quiet Cave',
+      lines: [
+        'Milo and Eva entered a quiet cave.',
+        'They spoke in whispers.',
+        'A stream shone in the dark.',
+        'They followed the water out.'
+      ],
+      questions: [
+        { q: 'How did they speak?', options: ['Quietly', 'Very loud', 'Shouting'], answer: 0 },
+        { q: 'What did they follow?', options: ['A stream', 'A road', 'A toy'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Pirate Map',
+      lines: [
+        'Ben found a paper map in a chest.',
+        'The map showed islands and x marks.',
+        'He used a compass and a smile.',
+        'The treasure was a box of candy.'
+      ],
+      questions: [
+        { q: 'What was in the chest?', options: ['A map', 'A key', 'A toy'], answer: 0 },
+        { q: 'What did he find in the treasure?', options: ['Candy', 'Money', 'Gold only'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Dragon Bridge',
+      lines: [
+        'A small dragon guarded a bridge.',
+        'He asked each child a riddle.',
+        'The kind child answered gently.',
+        'The dragon let them pass with a smile.'
+      ],
+      questions: [
+        { q: 'Who guarded the bridge?', options: ['A dragon', 'A robot', 'A lion'], answer: 0 },
+        { q: 'What did the child do?', options: ['Answered a riddle', 'Ran away', 'Sang loudly'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Castle Lanterns',
+      lines: [
+        'On the hill stood a tall castle.',
+        'Workers lit lanterns at dusk.',
+        'A hero walked from the gate.',
+        'The lights made windows glow.'
+      ],
+      questions: [
+        { q: 'Where was the hero?', options: ['In a castle', 'In a bus', 'In a zoo'], answer: 0 },
+        { q: 'What was lit at dusk?', options: ['Lanterns', 'Fireworks', 'Balloons'], answer: 0 }
+      ]
+    },
+    {
+      title: 'The Storm Signal',
+      lines: [
+        'A weather hut had a bright flag.',
+        'The flag changed with the wind.',
+        'A sailor watched it from the dock.',
+        'He tied the boat line tighter.'
+      ],
+      questions: [
+        { q: 'Where was the flag?', options: ['In a weather hut', 'In a cave', 'In a school'], answer: 0 },
+        { q: 'Who watched it?', options: ['A sailor', 'A cat', 'A pilot'], answer: 0 }
+      ]
+    },
+    {
+      title: 'Cloud Train',
+      lines: [
+        'Leah saw a white cloud like a train.',
+        'She pointed and told her friend.',
+        'They named each shape they saw.',
+        'Then the cloud moved up the sky.'
+      ],
+      questions: [
+        { q: 'What did Leah see?', options: ['Clouds', 'Birds', 'Planes'], answer: 0 },
+        { q: 'What did they do?', options: ['Named each shape', 'Collected stones', 'Fed fish'], answer: 0 }
       ]
     }
   ]
@@ -306,6 +827,7 @@ const SPEECH_VOICE_HINTS = [
 ];
 
 const SPEECH_RATE = 0.9;
+const STORY_SPEECH_RATE = 0.7;
 const SPEECH_PITCH = 1.08;
 const SPEECH_VOLUME = 1;
 
@@ -355,7 +877,7 @@ let currentPhonics = null;
 let currentWord = null;
 let wordSlots = [];
 let currentSight = null;
-let storyState = { story: null, questionIndex: 0, ready: false, running: false };
+let storyState = { story: null, questionIndex: 0, ready: false, running: false, lastStoryTitle: '' };
 let chosenVoice = null;
 
 function normaliseText(text) {
@@ -479,7 +1001,8 @@ function todayKey() {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
-function speak(text) {
+function speak(text, options = {}) {
+  const { rate = SPEECH_RATE } = options;
   if (!('speechSynthesis' in window)) {
     return;
   }
@@ -490,7 +1013,7 @@ function speak(text) {
 
   const utterance = new SpeechSynthesisUtterance(phrase);
   utterance.lang = chosenVoice?.lang || 'en-GB';
-  utterance.rate = SPEECH_RATE;
+  utterance.rate = rate;
   utterance.pitch = SPEECH_PITCH;
   utterance.volume = SPEECH_VOLUME;
   utterance.voice = chosenVoice || null;
@@ -1034,10 +1557,12 @@ function setupStory() {
   for (let i = 0; i <= level; i += 1) {
     available.push(...STORY_LEVELS[i]);
   }
-  storyState.story = randomChoice(available);
+  const candidates = available.filter((story) => story.title !== storyState.lastStoryTitle);
+  storyState.story = randomChoice(candidates.length ? candidates : available);
   storyState.questionIndex = 0;
   storyState.ready = true;
   storyState.running = false;
+  storyState.lastStoryTitle = storyState.story.title;
 
   const titleEl = document.getElementById('story-title');
   const textEl = document.getElementById('story-text');
@@ -1055,7 +1580,7 @@ function setupStory() {
   setMascotSpeech('stories', 'Start the story and answer each riddle.');
 
   document.getElementById('story-listen').onclick = () => {
-    speak(storyState.story.lines.join('. '));
+    speak(storyState.story.lines.join('. '), { rate: STORY_SPEECH_RATE });
     setMascotSpeech('stories', 'Listen to the story voice if you like.');
   };
   actionEl.textContent = 'Start';
@@ -1065,6 +1590,13 @@ function setupStory() {
     actionEl.style.display = 'none';
     renderStoryQuestion();
   };
+}
+
+function shuffleStory() {
+  storyState.ready = false;
+  storyState.running = false;
+  storyState.questionIndex = 0;
+  setupStory();
 }
 
 function renderStoryQuestion() {
@@ -1211,6 +1743,11 @@ function bindEvents() {
     button.addEventListener('click', () => {
       setActiveTab(button.dataset.goto);
     });
+  });
+
+  document.getElementById('story-shuffle').addEventListener('click', () => {
+    setMascotSpeech('stories', 'Shuffling to a new story cave adventure!');
+    shuffleStory();
   });
 
   document.getElementById('quest-refresh').addEventListener('click', () => {
