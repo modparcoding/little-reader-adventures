@@ -1139,6 +1139,12 @@ function bindEvents() {
     });
   });
 
+  document.querySelectorAll('.home-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+      setActiveTab(button.dataset.goto);
+    });
+  });
+
   document.getElementById('quest-refresh').addEventListener('click', () => {
     state.missions = { date: '', tasks: [] };
     ensureMissions();

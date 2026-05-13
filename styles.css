@@ -503,6 +503,29 @@ h1 {
   background: linear-gradient(180deg, var(--ok), #2a9a59);
 }
 
+.home-btn {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 16px;
+  min-height: 56px;
+  background: linear-gradient(180deg, #ffd16f, #ffb547);
+  color: #5a3b12;
+  border: 2px solid #ffcc68;
+  font-size: 1.02rem;
+  font-weight: 800;
+  box-shadow: var(--panel-shadow-soft);
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.04);
+}
+
+.home-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
 .light-btn {
   width: 100%;
   background: linear-gradient(180deg, #f1f3ff, #dce4ff);
