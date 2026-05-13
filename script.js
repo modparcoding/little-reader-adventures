@@ -288,6 +288,27 @@ const XP_REWARDS = {
   stories: 15
 };
 
+const SPEECH_VOICE_HINTS = [
+  'google uk english female',
+  'samantha',
+  'karen',
+  'sophie',
+  'ava',
+  'fiona',
+  'natalie',
+  'susan',
+  'amy',
+  'allison',
+  'alice',
+  'tessa',
+  'girl',
+  'female'
+];
+
+const SPEECH_RATE = 0.9;
+const SPEECH_PITCH = 1.08;
+const SPEECH_VOLUME = 1;
+
 const COIN_REWARDS = {
   phonics: 4,
   words: 5,
@@ -335,6 +356,45 @@ let currentWord = null;
 let wordSlots = [];
 let currentSight = null;
 let storyState = { story: null, questionIndex: 0, ready: false, running: false };
+let chosenVoice = null;
+
+function normaliseText(text) {
+  return String(text).replace(/['\u2018\u2019]/g, "'");
+}
+
+function pickBestVoice() {
+  if (!('speechSynthesis' in window)) {
+    return null;
+  }
+  const voices = speechSynthesis.getVoices() || [];
+  const english = voices.filter((voice) => voice.lang && voice.lang.toLowerCase().startsWith('en'));
+  const ukVoices = english.filter((voice) => voice.lang.toLowerCase().startsWith('en-gb'));
+
+  const findByHints = (pool) => {
+    const name = (voice) => `${voice.name} ${voice.lang}`.toLowerCase();
+    return pool.find((voice) => SPEECH_VOICE_HINTS.some((hint) => name(voice).includes(hint)));
+  };
+
+  return (
+    findByHints(ukVoices) ||
+    ukVoices[0] ||
+    findByHints(english) ||
+    english[0] ||
+    voices.find((voice) => voice.default) ||
+    voices[0] ||
+    null
+  );
+}
+
+function hydrateVoice() {
+  if (!('speechSynthesis' in window)) {
+    return;
+  }
+  const fresh = pickBestVoice();
+  if (fresh) {
+    chosenVoice = fresh;
+  }
+}
 
 function cloneDefaults() {
   return JSON.parse(JSON.stringify(stateDefaults));
@@ -423,9 +483,17 @@ function speak(text) {
   if (!('speechSynthesis' in window)) {
     return;
   }
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'en-GB';
-  utterance.rate = 0.82;
+  const phrase = normaliseText(text).trim();
+  if (!chosenVoice) {
+    hydrateVoice();
+  }
+
+  const utterance = new SpeechSynthesisUtterance(phrase);
+  utterance.lang = chosenVoice?.lang || 'en-GB';
+  utterance.rate = SPEECH_RATE;
+  utterance.pitch = SPEECH_PITCH;
+  utterance.volume = SPEECH_VOLUME;
+  utterance.voice = chosenVoice || null;
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
 }
@@ -1162,6 +1230,10 @@ function applyInitialTheme() {
 function init() {
   ensureMissions();
   applyInitialTheme();
+  if ('speechSynthesis' in window) {
+    hydrateVoice();
+    speechSynthesis.addEventListener('voiceschanged', hydrateVoice);
+  }
   bindEvents();
   renderGoalList();
   renderThemes();
